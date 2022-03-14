@@ -9,6 +9,8 @@ $( document ).ready(function () {
                 $output.val( $output.val().slice( 0, -1 ) );
             } else if ( className === "equal_to" ) {
                 $output.val( eval( $output.val() ) );
+            } else if ( className === "dot" ) {
+                $output.val( $output.val() + "." );
             } else {
                 $output.val( $output.val() + className );
             }

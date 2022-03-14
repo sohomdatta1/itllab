@@ -9,12 +9,12 @@ $( document ).ready( () => {
     });
     $( '.move' ).click( function () {
         if ( flag ) {
-            $( 'table' ).css( 'float', 'right' );
-            $( 'img' ).css( 'float', 'right' );
+            $( 'table' ).animate( {'left': '+=800px'} );
+            $( 'img' ).animate( {'left': '+=800px'} );
             flag = false;
         } else {
-            $( 'table' ).css( 'float', 'left' );
-            $( 'img' ).css( 'float', 'left' );
+            $( 'table' ).animate( {'left': '-=800px'} );
+            $( 'img' ).css( {'left': '-=800px'} );
             flag = true;
         }
     } );
