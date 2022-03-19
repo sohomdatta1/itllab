@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="container" style="width:80%; margin: 10em;">
+        <h1>Student Bio Form</h1>
+        <form>
+            <div class="form-group">
+              <label for="name-input">Name</label>
+              <input type="text" class="form-control" id="name-input" placeholder="name">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender1" value="male" checked>
+                <label class="form-check-label" for="gender1">
+                    Male
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender2" value="female">
+                <label class="form-check-label" for="gender2">
+                    Female
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender3" value="other">
+                <label class="form-check-label" for="gender3">
+                    Other
+                </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name-input">Interests</label>
+                <textarea class="form-control" id="name-input" placeholder="Interests (comma seperated)"></textarea>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="privacy-policy">
+                <label class="form-check-label" for="privacy-policy">Allow us to use your data according to our privacy policy</label>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Interests</th>
+            <th>Privacy policy</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>John Done</td>
+            <td>Male</td>
+            <td>html, css, js</td>
+            <td>Yes</td>
+            </tr>
+            </tbody>
+            </table>
+    </div>
+</body>
+</html>
