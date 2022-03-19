@@ -1,20 +1,24 @@
 $( document ).ready(function() {
-    window.onhashchange = function () {
+    
+    function changeTabs(tab) {
         var elements = [ 
             'read',
             'create',
             'delete',
             'update',
-        ];
-
-        
-    
+        ]; 
         elements.forEach( elem => $( '#' + elem ).hide() );
         elements.forEach( elem => $( '.nav-' + elem ).find('a').removeClass( 'active' ) );
-        $( '.nav-' + location.hash.slice(1) ).find('a').addClass( 'active' )
-        $( location.hash ).show();
+        $( '.nav-' + tab ).find('a').addClass( 'active' )
+        $( '#' + tab ).show();
     }
 
-    location.hash ='#create';
+    window.onhashchange = function () {
+        changeTabs( location.hash.substring(1) );
+    }
+
+    location.hash = 'create';
+
+    changeTabs( 'create' );
 
 });
