@@ -1,0 +1,12 @@
+<html>
+<head><title></title></head>
+
+<body>
+    <form action="{% url 'output' %}" method="POST">
+        {% csrf_token %}
+        {{ carForm.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

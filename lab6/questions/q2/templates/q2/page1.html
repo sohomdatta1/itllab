@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form method="POST" action="/q2/page2">
+        {% csrf_token %}
+        {{bioData.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

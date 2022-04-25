@@ -1,0 +1,176 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>questions</Name>
+    <RootNamespace>questions</RootNamespace>
+    <InterpreterId>MSBuild|ques-env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a008b849-184c-4c7c-bb02-e2dba795e1cd</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>questions.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="manage.py" />
+    <Compile Include="q1\admin.py" />
+    <Compile Include="q1\apps.py" />
+    <Compile Include="q1\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="q1\migrations\__init__.py" />
+    <Compile Include="q1\models.py" />
+    <Compile Include="q1\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="q1\tests.py" />
+    <Compile Include="q1\views.py" />
+    <Compile Include="q1\__init__.py" />
+    <Compile Include="q2\admin.py" />
+    <Compile Include="q2\apps.py" />
+    <Compile Include="q2\migrations\__init__.py" />
+    <Compile Include="q2\models.py" />
+    <Compile Include="q2\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="q2\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="q2\tests.py" />
+    <Compile Include="q2\views.py" />
+    <Compile Include="q2\__init__.py" />
+    <Compile Include="q3\admin.py" />
+    <Compile Include="q3\apps.py" />
+    <Compile Include="q3\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="q3\migrations\__init__.py" />
+    <Compile Include="q3\models.py" />
+    <Compile Include="q3\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="q3\tests.py" />
+    <Compile Include="q3\views.py" />
+    <Compile Include="q3\__init__.py" />
+    <Compile Include="q4\admin.py" />
+    <Compile Include="q4\apps.py" />
+    <Compile Include="q4\migrations\__init__.py" />
+    <Compile Include="q4\models.py" />
+    <Compile Include="q4\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="q4\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="q4\tests.py" />
+    <Compile Include="q4\views.py" />
+    <Compile Include="q4\__init__.py" />
+    <Compile Include="questions\__init__.py" />
+    <Compile Include="questions\settings.py" />
+    <Compile Include="questions\urls.py" />
+    <Compile Include="questions\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="q1\templates\q1\index.html" />
+    <Content Include="q1\templates\q1\output.html" />
+    <Content Include="q2\templates\q2\index.html" />
+    <Content Include="q2\templates\q2\page2.html" />
+    <Content Include="q2\templates\q2\page1.html" />
+    <Content Include="q3\templates\q3\home.html" />
+    <Content Include="q3\templates\q3\index.html" />
+    <Content Include="q3\templates\q3\login.html" />
+    <Content Include="q4\templates\q4\b.html" />
+    <Content Include="q4\templates\q4\index.html" />
+    <Content Include="q4\templates\q4\a.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="q1\" />
+    <Folder Include="q1\migrations\" />
+    <Folder Include="q1\templates\" />
+    <Folder Include="q1\templates\q1\" />
+    <Folder Include="q2\" />
+    <Folder Include="q2\migrations\" />
+    <Folder Include="q2\templates\" />
+    <Folder Include="q2\templates\q2\" />
+    <Folder Include="q3\" />
+    <Folder Include="q3\migrations\" />
+    <Folder Include="q3\templates\" />
+    <Folder Include="q3\templates\q3\" />
+    <Folder Include="q4\" />
+    <Folder Include="q4\migrations\" />
+    <Folder Include="q4\templates\" />
+    <Folder Include="q4\templates\q4\" />
+    <Folder Include="questions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="ques-env\">
+      <Id>ques-env</Id>
+      <Version>3.9</Version>
+      <Description>ques-env (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
