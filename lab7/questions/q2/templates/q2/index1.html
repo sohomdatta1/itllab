@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <hr />
+    <form action="/q2/register_work" method="POST">
+        {% csrf_token %}
+        {{workform.as_p}}
+        <button type="submit">Submit Category</button>
+    </form>
+    <hr />
+    <form action="/q2/register_live" method="POST">
+        {% csrf_token %}
+        {{livesform.as_p}}
+        <button type="submit">Submit Page</button>
+    </form>
+    <hr />
+    <h2>All Work</h2>
+    <table>
+        <tbody>
+            {% for live in lives %}
+            <tr>
+                <td>{{live.person_name}}</td>
+                <td>{{live.street}}</td>
+                <td>{{live.city}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <hr />
+    <h2>All Live</h2>
+    <table>
+        <tbody>
+            {% for work in works %}
+            <tr>
+                <td>{{work.person_name}}</td>
+                <td>{{work.company_name}}</td>
+                <td>{{work.salary}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

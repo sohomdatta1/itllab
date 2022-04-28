@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{companyform.as_p}}
+        <button type="submit">Search Company</button>
+    </form>
+    <p>
+        {% for row in companies %}
+            <hr />
+            Name: {{row.person_name.person_name}}<br />
+            Salary: {{row.salary}}<br />
+            Street: {{row.person_name.street}}<br />
+            City: {{row.person_name.city}}<br />
+        {% endfor %}
+    </p>
+</body>
+</html>

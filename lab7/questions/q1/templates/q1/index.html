@@ -1,0 +1,45 @@
+<html>
+<head><title></title></head>
+
+<body>
+    <hr />
+    <form action="/q1/register_cat" method="POST">
+        {% csrf_token %}
+        {{categoryForm.as_p}}
+        <button type="submit">Submit Category</button>
+    </form>
+    <hr />
+    <form action="/q1/register_page" method="POST">
+        {% csrf_token %}
+        {{pageForm.as_p}}
+        <button type="submit">Submit Page</button>
+    </form>
+    <hr />
+    <h2>All categories</h2>
+    <table>
+        <tbody>
+            {% for cat in categories %}
+            <tr>
+                <td>{{cat.name}}</td>
+                <td>{{cat.num_of_visits}}</td>
+                <td>{{cat.num_of_likes}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <hr />
+    <h2>All pages</h2>
+    <table>
+        <tbody>
+            {% for page in pages %}
+            <tr>
+                <td>{{page.title}}</td>
+                <td>{{page.url}}</td>
+                <td>{{page.views}}</td>
+                <td>{{page.category}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
