@@ -11,3 +11,17 @@ class Page(models.Model):
     url = models.URLField()
     views = models.IntegerField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=None)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
