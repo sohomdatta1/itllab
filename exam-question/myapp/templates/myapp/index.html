@@ -1,0 +1,17 @@
+<html>
+<head><title></title></head>
+
+<body>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <legend>
+        <label for="choice">{{question.question}}</label><br />
+        <input type="radio" name="choice" id="choice1" value="EASY" /> <label for="choice1">EASY</label><br />
+        <input type="radio" name="choice" id="choice2" value="DIFFICULT" /> <label for="choice2">DIFFICULT</label><br />
+    </legend>
+    <button type="submit">Vote</button>
+</form>
+
+</body>
+</html>

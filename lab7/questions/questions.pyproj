@@ -4,6 +4,7 @@
     <Name>questions</Name>
     <RootNamespace>questions</RootNamespace>
     <InterpreterId>MSBuild|ques-env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
